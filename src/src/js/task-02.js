@@ -7,11 +7,14 @@ const ingredients = [
   'Condiments',
 ];
 
-const mainCategories = document.querySelector("ul#ingredients");
+
+
+ const mainCategories = document.querySelector("ul#ingredients");
+let renderedHtml = '';
 ingredients.forEach((element) => {
   const li = document.createElement("li");
   li.textContent = element;
   li.classList.add("item");
-  mainCategories.appendChild(li);
+  mainCategories.append(li);
 });
 
