@@ -3,15 +3,17 @@ function getRandomHexColor() {
 }
 
 function createBoxes(amount) {
+  let renderedHtml = '';
   for (let i = 0; i < amount; i++) {
     const size = 30 + boxesAmount * 10;
     const item = document.createElement('div');
     item.style.width = `${size}px`;
     item.style.height = `${size}px`;
     item.style.backgroundColor = getRandomHexColor();
-    boxes.append(item);
+    renderedHtml += item.outerHTML;
     boxesAmount++;
   }
+  boxes.insertAdjacentHTML('beforeend', renderedHtml);
 }
 
 function destroyBoxes () {

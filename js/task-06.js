@@ -8,7 +8,7 @@ function validate(e) {
         input.classList.remove('invalid');
     }
     // Mark as valid.
-    else if (input.getAttribute('data-length') === e.target.value) {
+    else if (parseInt(input.getAttribute('data-length')) === e.target.value.length) {
         input.classList.add('valid');
         input.classList.remove('invalid');
     }
